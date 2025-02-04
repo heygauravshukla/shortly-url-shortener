@@ -63,6 +63,7 @@ export default function Shorten() {
         setError(data.error || "Failed to shorten URL");
       }
     } catch (err) {
+      console.error(err);
       setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);

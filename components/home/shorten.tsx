@@ -142,9 +142,14 @@ export default function Shorten() {
               aria-labelledby={`shortened-url-${index}`}
             >
               {/* Display original URL */}
-              <span className="break-all text-base font-medium text-very-dark-violet lg:text-xl">
+              <a
+                href={link.original}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="break-all text-base font-medium text-very-dark-violet lg:text-xl"
+              >
                 {link.original}
-              </span>
+              </a>
 
               {/* Divider for mobile view */}
               <div className="h-[1px] bg-gray lg:hidden"></div>

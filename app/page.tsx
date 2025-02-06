@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Boost from "@/components/home/boost";
 import Hero from "@/components/home/hero";
@@ -14,6 +15,7 @@ export default function Home() {
         <Stats />
         <Boost />
       </main>
+      <Footer />
     </>
   );
 }

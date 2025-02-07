@@ -47,7 +47,7 @@ export default function Shorten() {
     setError(null);
 
     try {
-      const response = await fetch("/api/shorten", {
+      const response = await fetch("/api/ulvis", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
@@ -56,7 +56,7 @@ export default function Shorten() {
       const data = await response.json();
 
       if (response.ok) {
-        const newLink = { original: url, short: data.result_url };
+        const newLink = { original: url, short: data.shortUrl };
         setLinks((prev) => [newLink, ...prev]); // Add new shortened link to the list
         setUrl(""); // Clear input field after successful shortening
       } else {

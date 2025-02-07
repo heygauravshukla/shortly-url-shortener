@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- **Solution URL:** [GitHub Repository](https://github.com/yoursgaurav/shortly)
-- **Live Site URL:** [Live Demo](https://shortly-seven-self.vercel.app/)
+- **Solution URL:** [Click here](https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M)
+- **Live Site URL:** [Click here](https://shortly-by-yoursgaurav.vercel.app/)
 
 ## My Process
 

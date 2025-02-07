@@ -8,11 +8,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "URL is required" }, { status: 400 });
     }
 
-    // Construct the GET request URL with only the 'url' parameter
-    const apiUrl = new URL("https://ulvis.net/api.php");
-    apiUrl.searchParams.append("url", url);
-
-    const response = await fetch(apiUrl.toString());
+    const response = await fetch("https://cleanuri.com/api/v1/shorten", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ url }),
+    });
 
     if (!response.ok) {
       return NextResponse.json(
@@ -21,9 +21,8 @@ export async function POST(req: Request) {
       );
     }
 
-    const data = await response.text(); // ulvis returns the shortened URL as plain text
-
-    return NextResponse.json({ shortUrl: data }, { status: 200 });
+    const data = await response.json();
+    return NextResponse.json(data, { status: 200 });
   } catch {
     return NextResponse.json(
       { error: "Something went wrong" },

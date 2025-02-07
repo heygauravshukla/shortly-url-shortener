@@ -47,7 +47,7 @@ Users should be able to:
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[clsx](https://www.npmjs.com/package/clsx) & [tailwind-merge](https://www.npmjs.com/package/tailwind-merge)** - For efficiently handling class names
 - **[prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)** - A Prettier plugin that automatically sorts Tailwind classes
-- **[ulvis API](https://ulvis.net/developer.html)** - Free URL shortener and redirection service
+- **[Clean URI API](https://cleanuri.com/)** - Used for URL shortening
 
 ### What I Learned
 

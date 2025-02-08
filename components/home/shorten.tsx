@@ -89,7 +89,7 @@ export default function Shorten() {
       <div className="bg-gradient-to-b from-white from-50% to-[#F0F1F6] to-50%">
         <Wrapper
           as="form"
-          className="grid gap-4 rounded-lg bg-dark-violet bg-[url('/backgrounds/bg-boost-mobile.svg')] bg-cover bg-center bg-no-repeat p-6 lg:flex lg:items-center lg:gap-6 lg:bg-[url('/backgrounds/bg-boost-desktop.svg')] lg:px-16 lg:py-[3.25rem]"
+          className="grid gap-4 rounded-lg bg-dark-violet bg-[url('/backgrounds/bg-shorten-mobile.svg')] bg-right-top bg-no-repeat p-6 lg:flex lg:items-center lg:gap-6 lg:bg-[url('/backgrounds/bg-shorten-desktop.svg')] lg:px-16 lg:py-[3.25rem]"
           aria-label="Shorten your URL"
           onSubmit={handleSubmit}
           noValidate

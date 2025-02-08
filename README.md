@@ -47,7 +47,7 @@ Users should be able to:
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[clsx](https://www.npmjs.com/package/clsx) & [tailwind-merge](https://www.npmjs.com/package/tailwind-merge)** - For efficiently handling class names
 - **[prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)** - A Prettier plugin that automatically sorts Tailwind classes
-- **[Clean URI API](https://cleanuri.com/)** - Used for URL shortening
+- **[Spoo.me Api](https://spoo.me/api)** - Used for URL shortening
 
 ### What I Learned
 
@@ -66,6 +66,7 @@ Users should be able to:
 
 ### Useful Resources
 
+- **[Spoo.me Api Documentation](https://spoo.me/api)** - This page provides information on how to use the API to shorten URLs and retrieve analytics
 - **[Next.js Docs](https://nextjs.org/docs)** - Best practices and documentation
 - **[Tailwind CSS Docs](https://tailwindcss.com/docs)** - Styling guidance
 - **[shadcn/ui Docs](https://ui.shadcn.com/)** - Helped with clsx, tailwind-merge, and utility functions

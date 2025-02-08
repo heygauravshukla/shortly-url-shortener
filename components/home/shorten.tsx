@@ -47,16 +47,16 @@ export default function Shorten() {
     setError(null);
 
     try {
-      const response = await fetch("/api/cleanuri", {
+      const response = await fetch("/api/spoome", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url }),
+        body: JSON.stringify({ url }), // Add alias, password, or maxClicks if needed
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        const newLink = { original: url, short: data.result_url };
+        const newLink = { original: url, short: data.short };
         setLinks((prev) => [newLink, ...prev]); // Add new shortened link to the list
         setUrl(""); // Clear input field after successful shortening
       } else {

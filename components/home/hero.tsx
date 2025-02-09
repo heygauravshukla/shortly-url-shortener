@@ -22,10 +22,13 @@ export default function Hero() {
         </div>
         {/* Text box */}
         <div className="grid place-items-center lg:order-1 lg:place-content-center lg:place-items-start">
-          <TypographyH1 id="hero-heading" className="text-center lg:text-left">
+          <TypographyH1
+            id="hero-heading"
+            className="text-center text-very-dark-blue lg:text-left"
+          >
             More than just shorter links
           </TypographyH1>
-          <p className="pb-7 pt-4 text-center text-lg/relaxed font-medium text-grayish-violet lg:max-w-[35ch] lg:pb-9 lg:pt-0 lg:text-left lg:text-3xl lg:-tracking-4">
+          <p className="pb-7 pt-4 text-center text-lg/relaxed font-medium text-gray lg:max-w-[35ch] lg:pb-9 lg:pt-0 lg:text-left lg:text-3xl lg:-tracking-4">
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>

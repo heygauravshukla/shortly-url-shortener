@@ -80,7 +80,7 @@ export default function Shorten() {
   return (
     <section
       aria-labelledby="shorten-heading"
-      className="mt-[5.5rem] bg-[#F0F1F6]"
+      className="grid gap-6 bg-[#F0F1F6]"
     >
       <h2 id="shorten-heading" className="sr-only">
         Shorten your links
@@ -134,7 +134,7 @@ export default function Shorten() {
 
       {/* Display list of shortened links */}
       {links.length > 0 && (
-        <Wrapper as="ul" className="grid gap-6 py-6 lg:gap-4">
+        <Wrapper as="ul" className="grid gap-6 lg:gap-4">
           {links.map((link, index) => (
             <li
               key={index}

@@ -48,7 +48,7 @@ export default function Stats() {
   return (
     <section
       aria-labelledby="stats-heading"
-      className="bg-[#F0F1F6] py-20 lg:py-[7.5rem]"
+      className="bg-[#F0F1F6] pb-20 pt-[5.25rem] lg:pb-[7.75rem] lg:pt-[7.5rem]"
     >
       <Wrapper className="grid gap-[5.75rem]">
         {/* Section heading and description */}

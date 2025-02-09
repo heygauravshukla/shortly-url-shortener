@@ -24,8 +24,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header>
-      <Wrapper className="relative flex items-center justify-between pb-6 pt-10 lg:gap-11 lg:pt-12">
+    <header className="relative pb-6 pt-10 lg:pb-8 lg:pt-12">
+      <Wrapper className="flex items-center justify-between lg:gap-11">
         {/* Logo */}
         <Link href="/" aria-label="Shortly Home">
           <Image
@@ -51,7 +51,7 @@ export default function Header() {
         <nav
           id="main-navigation"
           aria-label="Main Navigation"
-          className={`${isMenuOpen ? "" : "hidden"} absolute inset-x-0 top-full grid gap-8 rounded-xl bg-dark-violet px-6 py-10 lg:static lg:flex lg:w-full lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:bg-transparent lg:p-0`}
+          className={`${isMenuOpen ? "" : "hidden"} absolute inset-x-6 top-full grid gap-8 rounded-xl bg-dark-violet px-6 py-10 lg:static lg:flex lg:w-full lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:bg-transparent lg:p-0`}
         >
           {/* Navigation links list */}
           <ul className="grid justify-items-center gap-8 lg:flex lg:flex-row lg:items-center">

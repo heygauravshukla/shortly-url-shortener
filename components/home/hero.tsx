@@ -5,8 +5,11 @@ import Wrapper from "../ui/wrapper";
 
 export default function Hero() {
   return (
-    <section aria-labelledby="hero-heading" className="overflow-x-hidden">
-      <Wrapper className="grid gap-9 lg:grid-cols-[52%,48%] lg:gap-[5.5rem] lg:py-[4.25rem]">
+    <section
+      aria-labelledby="hero-heading"
+      className="overflow-x-hidden pb-[5.5rem] lg:pb-[4.25rem] lg:pt-12"
+    >
+      <Wrapper className="grid gap-9 lg:grid-cols-[52%,48%] lg:gap-[5.5rem]">
         {/* Image box */}
         <div className="relative h-[calc(100vw-3.0625rem)] lg:order-2 lg:h-[30.125rem]">
           <Image

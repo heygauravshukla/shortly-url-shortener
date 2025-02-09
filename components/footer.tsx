@@ -68,7 +68,7 @@ const socials: SocialItem[] = [
 
 export default function Footer() {
   return (
-    <footer className="bg-very-dark-violet py-14 lg:py-[72px]">
+    <footer className="bg-very-dark-violet pb-14 pt-[3.25rem] lg:py-[4.5rem]">
       <Wrapper className="grid justify-items-center gap-12 lg:grid-cols-6 lg:items-start lg:gap-0">
         {/* Logo */}
         <Link

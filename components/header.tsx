@@ -27,7 +27,7 @@ export default function Header() {
     <header className="relative pb-6 pt-10 lg:pb-8 lg:pt-12">
       <Wrapper className="flex items-center justify-between lg:gap-11">
         {/* Logo */}
-        <Link href="/" aria-label="Shortly Home">
+        <Link href="/" aria-label="Shortly Home" className="min-w-fit">
           <Image
             src="/logos/logo-dark.svg"
             alt="Shortly logo"

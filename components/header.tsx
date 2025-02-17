@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import IconHamburger from "./icons/icon-hamburger";
-import Button from "./ui/button";
+import { Button } from "./ui/button";
 import Wrapper from "./ui/wrapper";
 
 interface NavigationItem {
@@ -70,7 +70,9 @@ export default function Header() {
         <nav
           id="main-navigation"
           aria-label="Main Navigation"
-          className={`${isMenuOpen ? "" : "hidden"} absolute inset-x-6 top-full grid gap-8 rounded-xl bg-dark-violet px-6 py-10 lg:static lg:flex lg:w-full lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:bg-transparent lg:p-0`}
+          className={`${
+            isMenuOpen ? "" : "hidden"
+          } absolute inset-x-6 top-full grid gap-8 rounded-xl bg-primary px-6 py-10 lg:static lg:w-full lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:bg-transparent lg:p-0`}
         >
           {/* Navigation links list */}
           <ul className="grid justify-items-center gap-8 lg:flex lg:flex-row lg:items-center">
@@ -78,7 +80,7 @@ export default function Header() {
               <li key={id}>
                 <Link
                   href={path}
-                  className="text-lg font-bold text-white lg:text-base lg:-tracking-4 lg:text-grayish-violet lg:transition-all lg:hover:text-very-dark-violet"
+                  className="font-bold text-lg text-primary-foreground lg:text-base lg:-tracking-4 lg:text-secondary lg:hover:text-foreground lg:transition-all"
                 >
                   {name}
                 </Link>
@@ -86,16 +88,17 @@ export default function Header() {
             ))}
           </ul>
           {/* Divider line for mobile view */}
-          <div className="h-[1px] bg-grayish-violet lg:hidden"></div>
+          <div className="h-[1px] bg-secondary lg:hidden"></div>
           {/* Authentication buttons */}
           <div className="grid gap-6 lg:flex lg:flex-row lg:gap-9">
-            <button
-              type="button"
-              className="text-lg font-bold text-white lg:text-base lg:-tracking-4 lg:text-grayish-violet lg:transition-all lg:hover:text-very-dark-violet"
+            <Button
+              variant="ghost"
+              size="lg"
+              className="p-0 text-background lg:p-0 lg:text-base lg:-tracking-4 lg:text-secondary lg:hover:bg-background lg:hover:text-foreground"
             >
               Login
-            </button>
-            <Button type="button">Sign Up</Button>
+            </Button>
+            <Button>Sign Up</Button>
           </div>
         </nav>
       </Wrapper>

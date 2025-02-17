@@ -41,11 +41,9 @@ Users should be able to:
 
 ### Built With
 
+- **[shadcn/ui](https://ui.shadcn.com/)** - A set of beautifully-designed, accessible components
 - **[pnpm](https://pnpm.io/)** - Fast, disk-space-efficient package manager
 - **[Next.js](https://nextjs.org/)** - The React framework for the web
-- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with static typing
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[clsx](https://www.npmjs.com/package/clsx) & [tailwind-merge](https://www.npmjs.com/package/tailwind-merge)** - For efficiently handling class names
 - **[prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)** - A Prettier plugin that automatically sorts Tailwind classes
 - **[Spoo.me Api](https://spoo.me/api)** - Used for URL shortening
 
@@ -53,8 +51,7 @@ Users should be able to:
 
 - Ensuring **type safety with TypeScript**
 - Creating **icons as React components** to dynamically change properties on hover and other states
-- Avoiding immediate transitions to **newly released library versions** due to potential instability (e.g., **Tailwind CSS v4** lacks proper documentation and support, so waiting 3-4 months until it's stable is ideal)
-- Using **clsx** and **tailwind-merge** to create a utility function for reusable components
+- Using shadcn/ui to create accessible components
 - Understanding the **POST method in the Fetch API** and how it works
 - Utilizing **localStorage** for persistent data storage
 

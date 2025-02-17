@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Button from "../ui/button";
+import { Button } from "../ui/button";
 import Wrapper from "../ui/wrapper";
 
 interface ShortenedLink {
@@ -80,16 +80,16 @@ export default function Shorten() {
   return (
     <section
       aria-labelledby="shorten-heading"
-      className="grid gap-6 bg-[#F0F1F6]"
+      className="grid gap-6 bg-[hsl(230,25%,95%)]"
     >
       <h2 id="shorten-heading" className="sr-only">
         Shorten your links
       </h2>
 
-      <div className="bg-gradient-to-b from-white from-50% to-[#F0F1F6] to-50%">
+      <div className="bg-linear-to-b from-background from-50% to-[hsl(230,25%,95%)] to-50%">
         <Wrapper
           as="form"
-          className="grid gap-4 rounded-lg bg-dark-violet bg-[url('/backgrounds/bg-shorten-mobile.svg')] bg-right-top bg-no-repeat p-6 lg:flex lg:items-center lg:gap-6 lg:bg-[url('/backgrounds/bg-shorten-desktop.svg')] lg:px-16 lg:py-[3.25rem]"
+          className="grid gap-4 rounded-lg bg-primary bg-[url('/backgrounds/bg-shorten-mobile.svg')] bg-right-top bg-no-repeat p-6 lg:flex lg:items-center lg:gap-6 lg:bg-[url('/backgrounds/bg-shorten-desktop.svg')] lg:px-16 lg:py-13"
           aria-label="Shorten your URL"
           onSubmit={handleSubmit}
           noValidate
@@ -104,7 +104,11 @@ export default function Shorten() {
               type="url"
               name="url"
               placeholder="Shorten a link here..."
-              className={`w-full rounded-lg px-4 py-3 text-base font-medium placeholder:text-grayish-violet lg:px-8 lg:py-4 lg:text-xl ${error ? "text-red/50 ring-4 ring-red placeholder:text-red/50" : ""}`}
+              className={`w-full rounded-lg px-4 py-3 font-medium text-base placeholder:text-secondary bg-background lg:px-8 lg:py-4 lg:text-xl ${
+                error
+                  ? "text-destructive/50 ring-4 ring-destructive placeholder:text-destructive/50"
+                  : ""
+              }`}
               aria-required="true"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
@@ -112,7 +116,7 @@ export default function Shorten() {
             />
             {error && (
               <div
-                className="mt-1 text-xs font-medium italic text-red lg:absolute lg:left-0 lg:top-full lg:mt-2 lg:text-sm lg:font-bold lg:tracking-6"
+                className="mt-1 italic text-xs font-medium text-destructive lg:absolute lg:left-0 lg:top-full lg:mt-2 lg:tracking-6 lg:text-sm lg:font-bold"
                 aria-live="polite"
               >
                 {error}
@@ -122,10 +126,9 @@ export default function Shorten() {
 
           <Button
             type="submit"
-            rounded="lg"
-            size="lg"
+            size="md"
             disabled={loading}
-            className="lg:whitespace-nowrap"
+            className="rounded-md lg:whitespace-nowrap"
           >
             {loading ? "Shortening..." : "Shorten it!"}
           </Button>
@@ -138,7 +141,7 @@ export default function Shorten() {
           {links.map((link, index) => (
             <li
               key={index}
-              className="grid gap-3 rounded-lg bg-white px-4 py-[0.875rem] lg:flex lg:items-center lg:justify-between lg:px-6 lg:py-4"
+              className="grid gap-3 rounded-lg bg-background px-4 py-3.5 lg:flex lg:items-center lg:justify-between lg:px-6 lg:py-4"
               aria-labelledby={`shortened-url-${index}`}
             >
               {/* Display original URL */}
@@ -146,13 +149,13 @@ export default function Shorten() {
                 href={link.original}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="break-all text-base font-medium text-very-dark-violet lg:text-xl"
+                className="break-all font-medium text-base text-foreground lg:text-xl"
               >
                 {link.original}
               </a>
 
               {/* Divider for mobile view */}
-              <div className="h-[1px] bg-gray lg:hidden"></div>
+              <div className="h-[1px] bg-muted lg:hidden"></div>
 
               {/* Display shortened URL with a copy button */}
               <div className="grid gap-3 lg:flex lg:items-center lg:gap-6">
@@ -160,17 +163,14 @@ export default function Shorten() {
                   href={link.short}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base font-medium -tracking-2 text-cyan lg:text-xl"
+                  className="font-medium text-base text-accent -tracking-2 lg:text-xl"
                 >
                   {link.short}
                 </a>
 
                 <Button
-                  rounded="md"
-                  className={`py-2 lg:w-[6.375rem] lg:px-0 ${
-                    copiedIndex === index
-                      ? "bg-dark-violet focus:opacity-100"
-                      : ""
+                  className={`rounded-md py-2 text-base -tracking-4 lg:w-25.5 lg:px-0 ${
+                    copiedIndex === index ? "bg-primary hover:bg-primary" : ""
                   }`}
                   onClick={() => handleCopy(link.short, index)}
                   aria-label="Copy shortened URL"

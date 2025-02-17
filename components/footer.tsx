@@ -68,7 +68,7 @@ const socials: SocialItem[] = [
 
 export default function Footer() {
   return (
-    <footer className="bg-very-dark-violet pb-14 pt-[3.25rem] lg:py-[4.5rem]">
+    <footer className="bg-foreground pb-14 pt-13 lg:py-18">
       <Wrapper className="grid justify-items-center gap-12 lg:grid-cols-6 lg:items-start lg:gap-0">
         {/* Logo */}
         <Link
@@ -95,13 +95,13 @@ export default function Footer() {
                 key={id}
                 className="grid justify-items-center gap-5 lg:content-start lg:justify-items-start"
               >
-                <TypographyH4 className="text-white">{title}</TypographyH4>
+                <TypographyH4 className="text-background">{title}</TypographyH4>
                 <ul className="grid justify-items-center gap-2 lg:justify-items-start">
                   {items.map(({ id, name, href }) => (
                     <li key={id}>
                       <Link
                         href={href}
-                        className="text-base font-medium -tracking-5 text-gray transition-all hover:text-cyan"
+                        className="text-base font-medium -tracking-5 text-muted transition-all hover:text-accent"
                       >
                         {name}
                       </Link>
@@ -121,7 +121,7 @@ export default function Footer() {
           {socials.map(({ id, platform, icon: Icon, href }) => (
             <li key={id}>
               <Link href={href} aria-label={`Visit our ${platform} page`}>
-                <Icon className="transition-all hover:fill-cyan" />
+                <Icon className="hover:fill-accent transition-all" />
               </Link>
             </li>
           ))}

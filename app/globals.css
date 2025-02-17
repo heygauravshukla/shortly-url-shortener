@@ -1,3 +1,168 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: var(--font-poppins);
+
+  --text-*: initial;
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-2xl: 1.375rem; /* 22px */
+  --text-3xl: 1.5rem; /* 24px */
+  --text-4xl: 1.75rem; /* 28px */
+  --text-5xl: 2.5rem; /* 40px */
+  --text-6xl: 4.875rem; /* 78px */
+
+  --font-weight-*: initial;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --tracking-*: initial;
+  --tracking-normal: 0em;
+  --tracking-1: 0.01em;
+  --tracking-2: 0.02em;
+  --tracking-3: 0.03em;
+  --tracking-4: 0.04em;
+  --tracking-5: 0.05em;
+  --tracking-6: 0.06em;
+
+  --leading-*: initial;
+  --leading-auto: normal;
+  --leading-tight: 1.15;
+  --leading-snug: 1.25;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.625;
+  --leading-loose: 1.75;
+}
+
+:root {
+  /* Core design colors */
+  --cyan: hsl(180, 66%, 49%);
+  --dark-violet: hsl(257, 27%, 26%);
+  --red: hsl(0, 87%, 67%);
+  --gray: hsl(0, 0%, 75%);
+  --grayish-violet: hsl(257, 7%, 63%);
+  --very-dark-blue: hsl(255, 11%, 22%);
+  --very-dark-violet: hsl(260, 8%, 14%);
+
+  /* Theme colors for light mode */
+  --background: hsl(0, 0%, 100%);
+  --foreground: var(--very-dark-violet);
+
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: var(--very-dark-violet);
+
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: var(--very-dark-violet);
+
+  --primary: var(--dark-violet);
+  --primary-foreground: hsl(0, 0%, 100%);
+
+  --secondary: var(--grayish-violet);
+  --secondary-foreground: var(--dark-violet);
+
+  --muted: var(--gray);
+  --muted-foreground: var(--very-dark-blue);
+
+  --accent: var(--cyan);
+  --accent-foreground: hsl(0, 0%, 100%);
+
+  --destructive: var(--red);
+  --destructive-foreground: hsl(0, 0%, 100%);
+
+  --border: hsl(220, 13%, 91%);
+  --input: hsl(220, 13%, 91%);
+  --ring: var(--very-dark-violet);
+
+  --chart-1: var(--red);
+  --chart-2: var(--cyan);
+  --chart-3: var(--very-dark-blue);
+  --chart-4: var(--grayish-violet);
+  --chart-5: var(--dark-violet);
+
+  --radius: 0.6rem;
+}
+
+.dark {
+  /* Theme colors for dark mode */
+  --background: var(--very-dark-violet);
+  --foreground: hsl(210, 20%, 98%);
+
+  --card: var(--very-dark-violet);
+  --card-foreground: hsl(210, 20%, 98%);
+
+  --popover: var(--very-dark-violet);
+  --popover-foreground: hsl(210, 20%, 98%);
+
+  --primary: hsl(210, 20%, 98%);
+  --primary-foreground: var(--very-dark-blue);
+
+  --secondary: var(--very-dark-blue);
+  --secondary-foreground: hsl(210, 20%, 98%);
+
+  --muted: var(--very-dark-blue);
+  --muted-foreground: var(--grayish-violet);
+
+  --accent: var(--very-dark-blue);
+  --accent-foreground: hsl(210, 20%, 98%);
+
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+
+  --border: var(--very-dark-blue);
+  --input: var(--very-dark-blue);
+  --ring: hsl(216, 12.2%, 83.9%);
+
+  --chart-1: var(--dark-violet);
+  --chart-2: var(--cyan);
+  --chart-3: var(--red);
+  --chart-4: var(--grayish-violet);
+  --chart-5: var(--gray);
+}
+
+@theme inline {
+  --color-*: initial;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

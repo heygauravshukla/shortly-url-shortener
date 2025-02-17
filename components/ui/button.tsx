@@ -1,40 +1,58 @@
-import { cn } from "@/lib/utils";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
-interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
-  size?: "md" | "lg" | "xl";
-  rounded?: "md" | "lg" | "full";
-  href?: string;
-}
+import { cn } from "@/lib/utils";
 
-export default function Button({
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-bold transition-[opacity,color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 focus-visible:ring-4 focus-visible:outline-1 aria-invalid:focus-visible:ring-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-accent text-accent-foreground shadow-sm hover:opacity-50",
+        destructive:
+          "bg-destructive text-destructive-foreground shadow-xs hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "px-6 py-3 text-base -tracking-4 lg:py-2",
+        md: "py-2.5 text-lg lg:px-10 lg:py-4 lg:text-xl",
+        lg: "px-6 py-3 text-lg lg:px-10 lg:py-4 lg:text-xl",
+        xl: "px-10 py-3.5 text-xl",
+        icon: "size-9",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+function Button({
   className,
-  size = "md",
-  rounded = "full",
-  href,
+  variant,
+  size,
+  asChild = false,
   ...props
-}: ButtonProps) {
-  const Component = href ? "a" : "button";
+}: React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  }) {
+  const Comp = asChild ? Slot : "button";
 
   return (
-    <Component
-      href={href}
-      className={cn(
-        "bg-cyan font-bold text-white transition-all hover:opacity-50",
-        {
-          md: "px-6 py-3 text-base -tracking-4 lg:py-2",
-          lg: "px-6 py-3 text-lg lg:px-10 lg:py-4 lg:text-xl",
-          xl: "px-10 py-4 text-xl",
-        }[size],
-        {
-          md: "rounded-md",
-          lg: "rounded-lg",
-          full: "rounded-full",
-        }[rounded],
-        className,
-      )}
+    <Comp
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />
   );
 }
+
+export { Button, buttonVariants };

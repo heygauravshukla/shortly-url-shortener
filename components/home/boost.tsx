@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 import TypographyH2 from "../ui/typography-h2";
 import Wrapper from "../ui/wrapper";
@@ -15,8 +16,14 @@ export default function Boost() {
         >
           Boost your links today
         </TypographyH2>
-        <Button size="xl" className="w-fit">
-          Get Started
+        <Button size="xl" className="w-fit" asChild>
+          <Link
+            href="#shorten-section"
+            prefetch={false}
+            aria-label="Get started with Shortly"
+          >
+            Get Started
+          </Link>
         </Button>
       </Wrapper>
     </section>

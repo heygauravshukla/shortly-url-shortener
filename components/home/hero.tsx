@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../ui/button";
 import TypographyH1 from "../ui/typography-h1";
 import Wrapper from "../ui/wrapper";
@@ -32,8 +33,14 @@ export default function Hero() {
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>
-          <Button size="xl" aria-label="Get started with Shortly">
-            Get Started
+          <Button size="xl" asChild>
+            <Link
+              href="#shorten-section"
+              prefetch={false}
+              aria-label="Get started with Shortly"
+            >
+              Get Started
+            </Link>
           </Button>
         </div>
       </Wrapper>

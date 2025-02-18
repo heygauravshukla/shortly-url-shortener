@@ -79,8 +79,9 @@ export default function Shorten() {
 
   return (
     <section
+      id="shorten-section"
       aria-labelledby="shorten-heading"
-      className="grid gap-6 bg-[hsl(230,25%,95%)]"
+      className="scroll-m-20 grid gap-6 bg-[hsl(230,25%,95%)]"
     >
       <h2 id="shorten-heading" className="sr-only">
         Shorten your links

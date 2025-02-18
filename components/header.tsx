@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import IconHamburger from "./icons/icon-hamburger";
 import { Button } from "./ui/button";
+import { Separator } from "./ui/separator";
 import Wrapper from "./ui/wrapper";
 
 interface NavigationItem {
@@ -91,8 +92,8 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          {/* Divider line for mobile view */}
-          <div className="h-[1px] bg-secondary lg:hidden"></div>
+          {/* Separator for mobile view */}
+          <Separator className="bg-secondary lg:hidden" />
           {/* Authentication buttons */}
           <div className="grid gap-6 lg:flex lg:flex-row lg:gap-9">
             <Button

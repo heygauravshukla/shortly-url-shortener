@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
+import { Separator } from "../ui/separator";
 import Wrapper from "../ui/wrapper";
 
 interface ShortenedLink {
@@ -158,8 +159,8 @@ export default function Shorten() {
                 {link.original}
               </a>
 
-              {/* Divider for mobile view */}
-              <div className="h-[1px] bg-muted lg:hidden"></div>
+              {/* Separator for mobile view */}
+              <Separator className="bg-muted lg:hidden" />
 
               {/* Display shortened URL with a copy button */}
               <div className="grid gap-3 lg:flex lg:items-center lg:gap-6">

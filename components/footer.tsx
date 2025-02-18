@@ -4,7 +4,6 @@ import IconFacebook from "./icons/icon-facebook";
 import IconInstagram from "./icons/icon-instagram";
 import IconPinterest from "./icons/icon-pinterest";
 import IconTwitter from "./icons/icon-twitter";
-import TypographyH4 from "./ui/typography-h4";
 import Wrapper from "./ui/wrapper";
 
 // Define types for list items and sections
@@ -95,7 +94,9 @@ export default function Footer() {
                 key={id}
                 className="grid justify-items-center gap-5 lg:content-start lg:justify-items-start"
               >
-                <TypographyH4 className="text-background">{title}</TypographyH4>
+                <span className="text-base font-bold text-background">
+                  {title}
+                </span>
                 <ul className="grid justify-items-center gap-2 lg:justify-items-start">
                   {items.map(({ id, name, href }) => (
                     <li key={id}>

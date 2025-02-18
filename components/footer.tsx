@@ -115,10 +115,7 @@ export default function Footer() {
         </nav>
 
         {/* Social links */}
-        <ul
-          aria-label="Social Media Links"
-          className="flex items-center gap-6 lg:justify-self-end"
-        >
+        <ul className="flex items-center gap-6 lg:justify-self-end">
           {socials.map(({ id, platform, icon: Icon, href }) => (
             <li key={id}>
               <Link href={href} aria-label={`Visit our ${platform} page`}>

@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import Wrapper from "../ui/wrapper";
@@ -105,11 +106,13 @@ export default function Shorten() {
               type="url"
               name="url"
               placeholder="Shorten a link here..."
-              className={`w-full rounded-lg px-4 py-3 font-medium text-base placeholder:text-secondary bg-background lg:px-8 lg:py-4 lg:text-xl ${
-                error
-                  ? "text-destructive/50 ring-4 ring-destructive placeholder:text-destructive/50"
-                  : ""
-              }`}
+              className={cn(
+                "w-full rounded-lg px-4 py-3 font-medium text-base bg-background text-secondary lg:px-8 lg:py-4 lg:text-xl",
+                {
+                  "text-destructive/50 inset-ring-4 inset-ring-destructive":
+                    error,
+                }
+              )}
               aria-required="true"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
@@ -170,9 +173,12 @@ export default function Shorten() {
                 </a>
 
                 <Button
-                  className={`rounded-md py-2 text-base -tracking-4 lg:w-25.5 lg:px-0 ${
-                    copiedIndex === index ? "bg-primary hover:bg-primary" : ""
-                  }`}
+                  className={cn(
+                    "rounded-md py-2 text-base -tracking-4 lg:w-25.5 lg:px-0",
+                    {
+                      "bg-primary hover:opacity-100": copiedIndex === index,
+                    }
+                  )}
                   onClick={() => handleCopy(link.short, index)}
                   aria-label="Copy shortened URL"
                 >

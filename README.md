@@ -25,8 +25,7 @@ Users should be able to:
 - Shorten any valid URL
 - See a list of their shortened links, even after refreshing the browser
 - Copy the shortened link to their clipboard with a single click
-- Receive an error message when the `form` is submitted if:
-  - The `input` field is empty
+- Receive an error message when the `form` is submitted if the `input` field is empty
 
 ### Screenshot
 
@@ -41,19 +40,23 @@ Users should be able to:
 
 ### Built With
 
-- **[shadcn/ui](https://ui.shadcn.com/)** - A set of beautifully-designed, accessible components
-- **[pnpm](https://pnpm.io/)** - Fast, disk-space-efficient package manager
-- **[Next.js](https://nextjs.org/)** - The React framework for the web
-- **[prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)** - A Prettier plugin that automatically sorts Tailwind classes
-- **[Spoo.me Api](https://spoo.me/api)** - Used for URL shortening
+- **[pnpm](https://pnpm.io/)** - A fast, disk-space-efficient package manager
+- **[shadcn/ui](https://ui.shadcn.com/)** - A set of beautifully designed, accessible components
+- **[Next.js](https://nextjs.org/)** - A React framework for the web
+- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with syntax for types
+- **[Tailwind CSS](https://tailwindcss.com/)** - A utility-first CSS framework
+- **[Spoo.me API](https://spoo.me/api)** - Used for URL shortening
 
 ### What I Learned
 
-- Ensuring **type safety with TypeScript**
-- Creating **icons as React components** to dynamically change properties on hover and other states
-- Using shadcn/ui to create accessible components
-- Understanding the **POST method in the Fetch API** and how it works
-- Utilizing **localStorage** for persistent data storage
+- **Using shadcn/ui** to build a reusable component library
+- **Creating a utility function** using `tailwind-merge` and `clsx` for applying conditional classes
+- **New features in Tailwind CSS v4**
+- **Ensuring type safety with TypeScript**
+- **Using React components for icons** to dynamically modify properties (e.g., hover states)
+- **Understanding API routes in Next.js** and their benefits
+- **Utilizing browser localStorage** for persistent data storage without a database
+- **Understanding the benefits of pnpm** (faster installations, efficient disk space usage, and improved package management)
 
 ### Continued Development
 
@@ -63,13 +66,13 @@ Users should be able to:
 
 ### Useful Resources
 
-- **[Spoo.me Api Documentation](https://spoo.me/api)** - This page provides information on how to use the API to shorten URLs and retrieve analytics
-- **[Next.js Docs](https://nextjs.org/docs)** - Best practices and documentation
-- **[Tailwind CSS Docs](https://tailwindcss.com/docs)** - Styling guidance
-- **[shadcn/ui Docs](https://ui.shadcn.com/)** - Helped with clsx, tailwind-merge, and utility functions
-- **[GitHub repo of TailwindCSS.com](https://github.com/tailwindlabs/tailwindcss.com)** - Insights on using icon components
-- **[Kevin Powell’s YouTube channel](https://www.youtube.com/c/KevinPowell)** - Great for learning CSS best practices
-- **[ChatGPT](https://chatgpt.com/)** - Assisted throughout the development process
+- **[shadcn/ui Docs](https://ui.shadcn.com/)** - Comprehensive guide on how to build our own component library.
+- **[Next.js Docs](https://nextjs.org/docs)** - Comprehensive guide on Next.js features and best practices
+- **[Tailwind CSS Docs](https://tailwindcss.com/docs)** - Essential for mastering utility-based styling
+- **[Tailwind CSS GitHub Repo](https://github.com/tailwindlabs/tailwindcss.com)** - Insightful for using icon components
+- **[Spoo.me API Documentation](https://spoo.me/api)** - Guide for shortening URLs and retrieving analytics
+- **[ByteGrad YouTube Channel](https://www.youtube.com/@ByteGrad)** - Great for learning React and Next.js best practices
+- **[Kevin Powell’s YouTube Channel](https://www.youtube.com/@KevinPowell)** - Excellent resource for mastering CSS
 
 ## Author
 

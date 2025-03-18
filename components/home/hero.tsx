@@ -1,8 +1,11 @@
+// External dependencies
 import Image from "next/image";
 import Link from "next/link";
+
+// Local components
+import Wrapper from "../layout/wrapper";
+import TypographyH1 from "../typography/typography-h1";
 import { Button } from "../ui/button";
-import TypographyH1 from "../ui/typography-h1";
-import Wrapper from "../ui/wrapper";
 
 export default function Hero() {
   return (

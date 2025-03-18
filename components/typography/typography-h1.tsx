@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import * as React from "react";
 
 interface TypographyH1Props extends React.HTMLAttributes<HTMLHeadingElement> {
   className?: string;
@@ -15,7 +14,7 @@ export default function TypographyH1({
     <h1
       className={cn(
         "text-5xl/snug font-bold -tracking-1 lg:text-6xl/tight",
-        className,
+        className
       )}
       {...props}
     >

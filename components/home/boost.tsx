@@ -1,7 +1,10 @@
+// External dependencies
 import Link from "next/link";
+
+// Local components
+import Wrapper from "../layout/wrapper";
+import TypographyH2 from "../typography/typography-h2";
 import { Button } from "../ui/button";
-import TypographyH2 from "../ui/typography-h2";
-import Wrapper from "../ui/wrapper";
 
 export default function Boost() {
   return (

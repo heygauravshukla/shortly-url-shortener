@@ -1,13 +1,16 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+// External dependencies
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import IconHamburger from "./icons/icon-hamburger";
-import { Button } from "./ui/button";
-import { Separator } from "./ui/separator";
-import Wrapper from "./ui/wrapper";
+
+// Local components
+import IconHamburger from "../icons/icon-hamburger";
+import Wrapper from "../layout/wrapper";
+import { Button } from "../ui/button";
+import { Separator } from "../ui/separator";
+import { cn } from "@/lib/utils";
 
 interface NavigationItem {
   id: number;

@@ -1,7 +1,10 @@
+// External dependencies
 import Image from "next/image";
-import TypographyH2 from "../ui/typography-h2";
-import TypographyH3 from "../ui/typography-h3";
-import Wrapper from "../ui/wrapper";
+
+// Local components
+import Wrapper from "../layout/wrapper";
+import TypographyH2 from "../typography/typography-h2";
+import TypographyH3 from "../typography/typography-h3";
 
 // Type definition for each statistic item
 interface StatItem {

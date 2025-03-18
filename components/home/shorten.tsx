@@ -1,10 +1,13 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+// External dependencies
 import { useEffect, useState } from "react";
+
+// Local components
+import Wrapper from "../layout/wrapper";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
-import Wrapper from "../ui/wrapper";
+import { cn } from "@/lib/utils";
 
 interface ShortenedLink {
   original: string;

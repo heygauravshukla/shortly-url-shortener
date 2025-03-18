@@ -1,10 +1,13 @@
+// External dependencies
 import Image from "next/image";
 import Link from "next/link";
-import IconFacebook from "./icons/icon-facebook";
-import IconInstagram from "./icons/icon-instagram";
-import IconPinterest from "./icons/icon-pinterest";
-import IconTwitter from "./icons/icon-twitter";
-import Wrapper from "./ui/wrapper";
+
+// Local components
+import IconFacebook from "../icons/icon-facebook";
+import IconInstagram from "../icons/icon-instagram";
+import IconPinterest from "../icons/icon-pinterest";
+import IconTwitter from "../icons/icon-twitter";
+import Wrapper from "../layout/wrapper";
 
 // Define types for list items and sections
 interface ListItem {

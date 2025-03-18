@@ -1,5 +1,12 @@
+// External dependencies
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+
+// Local components and providers
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+
+// Styles
 import "./globals.css";
 
 const poppins = Poppins({
@@ -23,7 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} scroll-smooth`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

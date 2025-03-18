@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import * as React from "react";
 
 interface TypographyH3Props extends React.HTMLAttributes<HTMLHeadingElement> {
   className?: string;

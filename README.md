@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- **Solution URL:** [Click here](https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M)
-- **Live Site URL:** [Click here](https://shortly-by-yoursgaurav.vercel.app/)
+- **Solution URL:** [https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M](https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M)
+- **Live Site URL:** [https://url-shortening-api-landing-page-heygauravshukla.vercel.app](https://url-shortening-api-landing-page-heygauravshukla.vercel.app)
 
 ## My Process
 

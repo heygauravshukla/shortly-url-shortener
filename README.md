@@ -1,81 +1,84 @@
-# Frontend Mentor - Shortly URL Shortening API Challenge Solution
+# URL shortening API landing page
 
-This is a solution to the [Shortly URL Shortening API Challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help developers improve their coding skills by building real-world projects.
+This is a solution to the [URL shortening API landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of Contents
+## Table of contents
 
 - [Overview](#overview)
-  - [The Challenge](#the-challenge)
+  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My Process](#my-process)
-  - [Built With](#built-with)
-  - [What I Learned](#what-i-learned)
-  - [Continued Development](#continued-development)
-  - [Useful Resources](#useful-resources)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
 
-### The Challenge
+### The challenge
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- Shorten any valid URL
-- See a list of their shortened links, even after refreshing the browser
-- Copy the shortened link to their clipboard with a single click
-- Receive an error message when the `form` is submitted if the `input` field is empty
+- View the optimal layout for the site depending on their device's screen size.
+- Shorten any valid URL.
+- See a list of their shortened links, even after refreshing the browser.
+- Copy the shortened link to their clipboard in a single click.
+- Receive an error message when the `form` is submitted if:
+  - The `input` field is empty.
+  - The submitted URL has already been shortened.
+  - The submitted URL is a previously generated shortened link.
 
 ### Screenshot
 
-![Shortly Screenshot](/public/screenshots/desktop.png)
+![](/public/screenshots/desktop.png)
 
 ### Links
 
-- **Solution URL:** [https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M](https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M)
-- **Live Site URL:** [https://url-shortening-api-landing-page-heygauravshukla.vercel.app](https://url-shortening-api-landing-page-heygauravshukla.vercel.app)
+- Solution URL: [https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M](https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M)
+- Live Site URL: [https://url-shortening-api-landing-page-heygauravshukla.vercel.app](https://url-shortening-api-landing-page-heygauravshukla.vercel.app)
 
-## My Process
+## My process
 
-### Built With
+### Built with
 
-- **[pnpm](https://pnpm.io/)** - A fast, disk-space-efficient package manager
-- **[shadcn/ui](https://ui.shadcn.com/)** - A set of beautifully designed, accessible components
-- **[Next.js](https://nextjs.org/)** - A React framework for the web
-- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with syntax for types
-- **[Tailwind CSS](https://tailwindcss.com/)** - A utility-first CSS framework
-- **[Spoo.me API](https://spoo.me/api)** - Used for URL shortening
+- Semantic JSX markup
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Shadcn UI](https://ui.shadcn.com/) - Open-source component library
+- [Radix UI](https://www.radix-ui.com/) - Accessible component primitives
+- [Spoo.me API](https://spoo.me/api) - API for URL shortening
+- [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager
 
-### What I Learned
+### What I learned
 
-- **Using shadcn/ui** to build a reusable component library
-- **Creating a utility function** using `tailwind-merge` and `clsx` for applying conditional classes
-- **New features in Tailwind CSS v4**
-- **Ensuring type safety with TypeScript**
-- **Using React components for icons** to dynamically modify properties (e.g., hover states)
-- **Understanding API routes in Next.js** and their benefits
-- **Utilizing browser localStorage** for persistent data storage without a database
-- **Understanding the benefits of pnpm** (faster installations, efficient disk space usage, and improved package management)
+This project enhanced my understanding of several key concepts, including:
 
-### Continued Development
+- Ensuring type safety and improving code reliability through TypeScript.
+- Leveraging Shadcn UI to create a reusable and maintainable component library.
+- Utilizing the `cn` utility function to apply conditional classes efficiently in Tailwind CSS.
+- Implementing SVG icons as React components to enable dynamic property modifications, such as hover states.
+- Employing the `localStorage` object to persist shortened URLs as key-value pairs in the browser.
 
-- Enhancing **accessibility and performance**
-- Improving **design accuracy** to better match the original challenge
-- Implementing **best practices** for code readability and maintainability
+### Continued development
 
-### Useful Resources
+In future projects, I intend to focus on the following areas for improvement:
 
-- **[shadcn/ui Docs](https://ui.shadcn.com/)** - Comprehensive guide on how to build our own component library.
-- **[Next.js Docs](https://nextjs.org/docs)** - Comprehensive guide on Next.js features and best practices
-- **[Tailwind CSS Docs](https://tailwindcss.com/docs)** - Essential for mastering utility-based styling
-- **[Tailwind CSS GitHub Repo](https://github.com/tailwindlabs/tailwindcss.com)** - Insightful for using icon components
-- **[Spoo.me API Documentation](https://spoo.me/api)** - Guide for shortening URLs and retrieving analytics
-- **[ByteGrad YouTube Channel](https://www.youtube.com/@ByteGrad)** - Great for learning React and Next.js best practices
-- **[Kevin Powell’s YouTube Channel](https://www.youtube.com/@KevinPowell)** - Excellent resource for mastering CSS
+- Establishing a centralized constants directory to streamline content management and enhance project organization.
+
+### Useful resources
+
+- [Tailwind CSS GitHub Repository](https://github.com/tailwindlabs/tailwindcss.com) - This resource provided inspiration on integrating SVG icons as React components, enhancing interactivity.
+- [cn() - Every Tailwind Coder Needs It (clsx + twMerge)](https://www.youtube.com/watch?v=re2JFITR7TI) - This video by Wesley on the ByteGrad YouTube channel offered practical guidance on the `cn` utility function, combining `clsx` and `tailwind-merge` for efficient class management.
 
 ## Author
 
-- **GitHub:** [@yoursgaurav](https://github.com/yoursgaurav)
-- **Frontend Mentor:** [@yoursgaurav](https://www.frontendmentor.io/profile/yoursgaurav)
-- **X (formerly Twitter):** [@heygauravshukla](https://x.com/heygauravshukla)
+- Website - [Gaurav Shukla](https://heygauravshukla.vercel.app)
+- Frontend Mentor - [@heygauravshukla](https://www.frontendmentor.io/profile/heygauravshukla)
+- X - [@heygauravshukla](https://www.x.com/heygauravshukla)

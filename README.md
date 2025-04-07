@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M](https://www.frontendmentor.io/solutions/shortly-url-shortening-api-challenge-solution-myO-hSXI8M)
-- Live Site URL: [https://url-shortening-api-landing-page-heygauravshukla.vercel.app](https://url-shortening-api-landing-page-heygauravshukla.vercel.app)
+- Live Site URL: [https://shortly-url-shortener-heygauravshukla.netlify.app](https://shortly-url-shortener-heygauravshukla.netlify.app)
 
 ## My process
 
